@@ -1,0 +1,70 @@
+<html>
+{% load staticfiles %}
+
+
+<head>
+<title>MAD</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">	
+
+<link rel="stylesheet" href="{% static "themes/terp.min.css"%}" />
+<link rel="stylesheet" href="{% static "themes/jquery.mobile.icons.min.css"%}" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile.structure-1.4.2.min.css" />
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+	
+</head>
+
+
+
+<div data-role="page" id="home" data-theme="a">
+
+  <!-- Nav Panel -->
+  <div data-role="panel" id="overlayPanel" data-display="overlay"> 
+    <h2>Navigation</h2>    
+    <div data-role="controlgroup" data-type="vertical">
+      <a href="{% url 'home' %}" class="ui-btn">Home</a>
+      <a href="{% url 'about' %}" class="ui-btn">About</a>
+      <a href="{% url 'apps' %}" class="ui-btn">Apps</a>
+      
+
+
+
+    </div>  
+    
+    <h2>Other Club Pages</h2>
+    
+    <div data-role="controlgroup" data-type="vertical">
+      <a href="https://twitter.com/MADterps" class="ui-btn">Twitter</a>
+      <a href="https://www.facebook.com/groups/199304320170566/" class="ui-btn">Facebook</a>
+      <a href="https://orgsync.com/64367/chapter" class="ui-btn">OrgSync</a>
+
+      
+
+
+    </div>
+    
+   
+
+    
+    
+  </div> 
+
+  <!-- Nav Header  -->
+  <div data-role="header" data-position="fixed" data-fullscreen="true">
+  <a href="#overlayPanel" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc" data-icon="bars" data-iconpos="notext"></a>
+  <a href="/" data-shadow="false" data-iconshadow="false" class="ui-icon-nodisc" data-icon="home" data-iconpos="notext"></a>
+    <h1>M.A.D.</h1>
+  </div><br><br>
+
+{% block content %}
+{% endblock %}
+ 
+
+</div>
+
+
+
+
+
+</html>
