@@ -1,3 +1,47 @@
 from django.db import models
+import datetime
 
-# Create your models here.
+# Models for the MAD Club
+
+########################################################################
+class Member(models.Model):
+    """ Each Member of the club """
+    
+    # Name
+    name = models.CharField(max_length=150)
+    
+    # Description
+    description = models.CharField(max_length=500, blank=True, null=True) 
+    
+    # QRcode ex. MAD128
+    qr_code = models.CharField(max_length=150)
+    
+    # Meetings
+    meetings = models.ManyToManyField(Meeting)
+    
+
+    #----------------------------------------------------------------------
+    def __unicode__(self):
+        return self.name
+    
+########################################################################
+class Meeting(models.Model):
+    """ Meeting Information """
+    
+    # Date
+    date = models.DateTimeField(default=datetime.now, blank=True)    
+    
+    # Notes
+    notes = models.CharField(max_length=500, blank=True, null=True)    
+
+    #----------------------------------------------------------------------
+    def __init__(self):
+        """Constructor"""
+        
+        
+    
+    
+        
+        
+    
+    
