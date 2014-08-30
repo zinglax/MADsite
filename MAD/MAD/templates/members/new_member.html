@@ -1,0 +1,145 @@
+{% extends "members/base.html" %}
+{% block content %}
+<div data-role="content" data-theme="{{ theme }}" class="ui-body ui-corner-all ui-overlay-shadow"><h1>Mobile App Developers Club</h1>
+<p>Welcome to the home site of the University of Maryland Mobile Application Developers Club.  Our goal is to motivate UMD students about developing for mobile platforms and create applications that will benefit students on campus.</p>
+</div>
+</br>
+
+<div data-role="content" data-theme="{{ theme }}" class="ui-body ui-corner-all ui-overlay-shadow">
+<h1>Interested? Give us your email and we will get you involved!<h1>
+<!-- NEW Member FORM -->
+<form action="{% url 'home' %}" method="get" enctype="multipart/form-data">{% csrf_token %}
+	<input type="text" name="name" id="name" placeholder="Name:" data-clear-btn="true">
+	<textarea name="email" id="email" placeholder="Email:" ></textarea>
+	
+	<input type="submit" data-inline="true" value="Send Info" data-icon="plus" data-iconpos="right">
+</form>
+</div>
+</br>
+
+<div data-role="content" data-theme="{{ theme }}" class="ui-body ui-corner-all ui-overlay-shadow">
+<h2>Current Officers</h2>
+<div class="ui-grid-d ui-responsive">
+
+<div class="ui-block-a">
+<a href="https://www.facebook.com/dylan.zingler" class="ui-btn ui-corner-all ui-shadow">President:</br>Dylan Zingler</a><br>
+</div>
+
+<div class="ui-block-b">
+<a href="https://www.facebook.com/david.lobosco?fref=ts" class="ui-btn ui-corner-all ui-shadow">Lead Development Officer:</br>David LoBosco</a><br>
+</div>
+
+<div class="ui-block-c">
+<a href="https://www.facebook.com/kieran.raftery.7?fref=ts" class="ui-btn ui-corner-all ui-shadow">Vice President:</br>Kieran Raftery</a><br>
+</div>
+
+<div class="ui-block-d">
+<a href="https://www.facebook.com/sasadiq8?fref=ts" class="ui-btn ui-corner-all ui-shadow">Vice Lead Development Officer:</br>Safiyah Sadiq</a><br>
+</div>
+
+<div class="ui-block-e">
+<a href="https://www.facebook.com/garrett.mohammadioun" class="ui-btn ui-corner-all ui-shadow">Treasurer:</br>
+Garrett Mohammadioun</a><br>
+</div>
+</div>
+
+
+</div>
+</br>
+
+<div data-role="content" data-theme="{{ theme }}" class="ui-body ui-corner-all ui-overlay-shadow">
+<h2>Founding Members</h2>
+<div class="ui-grid-c ui-responsive">
+
+<div class="ui-block-a">
+<img  HEIGHT=150 WIDTH=150 src="https://scontent-b-ord.xx.fbcdn.net/hphotos-xpa1/t1.0-9/935273_675046492516129_223107768_n.jpg" alt="Vinnie">
+<a href="https://www.facebook.com/vinnie.vendemia?fref=ts" class="ui-btn ui-corner-all ui-shadow">First President: Vinnie Vendemia</a><br>
+<span></span>
+</div>
+
+<div class="ui-block-b">
+<img  HEIGHT=128 WIDTH=192 src="https://scontent-a-ord.xx.fbcdn.net/hphotos-xpa1/t1.0-9/1450855_10202326070338001_1964859196_n.jpg" alt="Vinnie">
+<a href="https://www.facebook.com/Bori.d.1st?fref=ts" class="ui-btn ui-corner-all ui-shadow">First Vice President: Bori Oludemi</a><br>
+<span></span>
+</div>
+
+<div class="ui-block-c">
+<img  HEIGHT=151 WIDTH=113 src="https://scontent-a-ord.xx.fbcdn.net/hphotos-xaf1/t1.0-9/230731_6858706593_4919_n.jpg" alt="Vinnie">
+<a href="https://www.facebook.com/Ely.shamouilian?fref=ts" class="ui-btn ui-corner-all ui-shadow">First Treasurer: Ely Shamouilian</a><br>
+<span></span>
+</div>
+
+<div class="ui-block-d">
+<img HEIGHT=240 WIDTH=160 src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xfa1/v/t1.0-9/422847_10150563508266497_211262774_n.jpg?oh=1ee6251300ded055619669566e4b1fe8&oe=5468AC36&__gda__=1416788993_f42bddcb1fa7629a5c0c1697b05ac873" alt="Vinnie">
+<a href="https://www.facebook.com/dylan.zingler" class="ui-btn ui-corner-all ui-shadow">First Lead Developement Officer: Dylan Zingler</a><br>
+<span></span>
+</div>
+</div>
+
+</div>
+</br>
+
+<div data-role="content" data-theme="{{ theme }}" class="ui-body ui-corner-all ui-overlay-shadow">
+<h1>About the Club</h1>
+
+<h2>Our Mission</h2>
+<p>The goal of the Mobile App Developers (MAD for short) is to design and build mobile applications that will benefit the students of the University of Maryland. Members will learn all the processes of app development. Members will need no previous knowledge of app development, only a willingness to learn about this exciting field. Members will also get the opportunity to learn and network with professionals in the field.</p>
+
+
+<h2>Membership and Eligibility Criteria</h2>
+<p>Mobile App Developers does not restrict membership or discriminate on the basis of race, color, creed, sex, sexual orientation, gender identity, gender expression, marital status, personal appearance, age, national origin, political affiliation, physical or mental disability, or on the basis of rights secured by the First Amendment of the United States Constitution. For definitions of personal appearance and sexual orientation see the University's Code of Human Relations.</p>
+
+
+<h2>Our History</h2>
+<p>We founded this group in January 2012 with all the goals mentioned above. When we first began, we knew that mobile development was a growing industry. We hoped to show our members the benefits of leaning these skills, outside of a classroom environment. All of our professors have stressed that in order to really learn the art of Computer Science, a student must practice on his or her own time. We hope to bring the same passion and enthusiasm that we have for mobile programming to our members.</p>
+
+</div>
+</br>
+<div data-role="content" data-theme="{{ theme }}" class="ui-body ui-corner-all ui-overlay-shadow">
+<h3>Contact Info</h3>
+<ul data-role="listview" data-inset="true">
+<li><a href="mailto:mobileappdevelopersclub@gmail.com">Email Us: mobileappdevelopersclub@gmail.com</a></li>
+<li><a href="https://twitter.com/MADterps" class="ui-btn">Twitter</a></li>
+<li><a href="https://www.facebook.com/groups/199304320170566/" class="ui-btn">Facebook</a></li>
+<li><a href="https://orgsync.com/64367/chapter" class="ui-btn">OrgSync</a></li>
+</ul>
+
+</div>
+
+
+</br>
+
+<div data-role="content" data-theme="{{ theme }}" class="ui-body ui-corner-all ui-overlay-shadow">
+<h1>Apps</h1>
+
+<div data-role="controlgroup" data-type="vertical">
+      <a href="#finalsapp" data-rel="popup" data-position-to="window" class="ui-btn">Finals App</a>
+      <a href="#shellp" data-rel="popup" data-position-to="window" class="ui-btn">Shellp</a>      
+      <a href="#triviaapp" data-rel="popup" data-position-to="window" class="ui-btn">UMD Trivia</a>
+
+</div>
+
+<div data-role="popup" id="finalsapp"> 
+      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="https://lh4.ggpht.com/Vt38fg8EH4KPX3p9zNxqRm2zhBmlXxbLAJ1D32OvWAUPiD6Chz8NgItVSrKNtD-fLywt=w300-rw" alt="Finals App!">
+      <p>This is the Finals App used to keep track of your final schedule. There are food specials and events listed as well as final times for classes.  This app was started in Fall of 2013 and was updated in Spring of 2014</p>
+      <a href="https://play.google.com/store/apps/details?id=com.mobileappdevelopersclub.finals_app&hl=en
+" class="ui-btn">Google Play Link</a>
+</div>
+
+<div data-role="popup" id="shellp"> 
+      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="https://lh6.ggpht.com/WHbOUUB27kg-npnSvdQcpif5hsLN7ufu0RmfvwGaQBiaUoyDaYTwvHKfWyFpuxoa-PIB=w300-rw" alt="Shellp">
+      <p>This app was intented to be a handheld version of TerpNav.  It has College Park weather data and in the future will be able to route you to all your class on a certain day.</p>
+      <a href="https://play.google.com/store/apps/details?id=com.mobileappdevelopersclub.shellp&hl=en" class="ui-btn">Google Play Link</a>
+</div>
+
+<div data-role="popup" id="triviaapp">
+      <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="https://lh6.ggpht.com/lydVllhobNnoi3wvnQsOnhdyC4eJO8KT3yARXHR8n0qeBrKjvTT29bMVMTT-EFNRCG8=w300-rw" alt="UMD Trivia!">
+      <p>This is the first app that the club produced. Learn about campus by taking the triva quiz</p>
+      <a href="https://play.google.com/store/apps/details?id=vinnie.vendemia.namespace&hl=en" class="ui-btn">Google Play Link</a>
+</div>
+
+
+</div>
+
+
+{% endblock %}

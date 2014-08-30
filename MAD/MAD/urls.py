@@ -9,5 +9,10 @@ urlpatterns = patterns('',
     url(r'^about', 'members.views.about', name='about'),
     url(r'^apps', 'members.views.apps', name='apps'),
     
-                       
+ 
+    # New Member
+    url(r'^new_member', 'members.views.new_member', name='new_member'),
+    
+    # Members
+    url(r'^members', 'members.views.members', name='members'),
 )
