@@ -15,4 +15,8 @@ urlpatterns = patterns('',
     
     # Members
     url(r'^members', 'members.views.members', name='members'),
+    
+    # Export Database
+    url(r'^export', 'members.views.export', name='export'),
+    
 )

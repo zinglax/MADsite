@@ -9,6 +9,7 @@ from django.http import HttpResponseRedirect, HttpResponse, QueryDict
 
 from models import *
 from django.conf import settings
+import djqscsv
 
 
 site_variables = {}
@@ -51,3 +52,8 @@ def new_member(request):
 def members(request):
   site_variables['members'] = Member.objects.all()
   return render_to_response("members/members.html", site_variables)
+
+
+def export(request):
+    qs = Member.objects.all()
+    return djqscsv.render_to_csv_response(qs)
